@@ -1,0 +1,44 @@
+.answers{
+    display: flex;
+    flex-direction: row;
+    gap:20px
+}
+.answer{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    border: 1px solid white;
+    padding: 10px;
+}
+.answer-selected{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    border: 1px solid white;
+    padding: 10px;
+    background-color: yellow;
+}
+.answer-correct{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    border: 1px solid white;
+    padding: 10px;
+    background-color: green;
+}
+.answer-wrong{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    border: 1px solid white;
+    padding: 10px;
+    background-color: red;
+}
+.answer-not-selected{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    border: 1px solid white;
+    padding: 10px;
+    background-color: gray;
+}
