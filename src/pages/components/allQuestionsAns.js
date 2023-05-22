@@ -19,7 +19,7 @@ export default function AllQuestionsAns({ showAnswer,setScore }) {
         return () => { ignore = true }
     }, [])
 
-    return <>
+    return <div className="all-questions-container">
         {allDataComponent ? allDataComponent.map(dataArrayItem => {return <QuestionAns allData={dataArrayItem} key={dataArrayItem["correct_answer"]} showAnswer={showAnswer} setScore={setScore}/>}) : <></>}
-    </>
+    </div>
 }

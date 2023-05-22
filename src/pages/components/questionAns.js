@@ -4,17 +4,16 @@ import { useEffect,useState } from "react";
 
 
 export default function QuestionAns({allData,showAnswer,setScore}){
-
-    const [allAnswers,setallAnswers]=useState([])
+    const [allQAnswers,setallQAnswers]=useState([])
     useEffect(()=>{
         const randomPosition=Math.floor(Math.random()*4);
         const answerArray=[...allData["incorrect_answers"]]
         answerArray.splice(randomPosition,0,allData["correct_answer"]);
-        setallAnswers(answerArray)
+        setallQAnswers(answerArray)
     },[])
 
-    return <div>
+    return <div className="single-question">
         <Question question={allData["question"]}/>
-        <Answers answers={allAnswers} correctAnswer={allData["correct_answer"]} showAnswer={showAnswer} setScore={setScore}/>
+        <Answers answers={allQAnswers} correctAnswer={allData["correct_answer"]} showAnswer={showAnswer} setScore={setScore}/>
     </div>
 }

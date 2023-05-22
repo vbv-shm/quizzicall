@@ -3,11 +3,14 @@ import AllQuestionsAns from "./components/allQuestionsAns";
 import Footer from "./components/footer";
 
 export default function Questions_page(){
+    console.log("rerendered Questionpage")
     const [showAnswer,setShowAnswer]=useState(false);
     const [score,setScore]=useState(0); 
-    console.log(score)
-    return <div>
-            <AllQuestionsAns showAnswer={showAnswer} setScore={setScore}/>
-            <Footer showAnswer={showAnswer} setShowAnswer={setShowAnswer} score={score}/>
+    const [value,setValue]=useState(0);
+    return <div className="question-page">
+            
+            <AllQuestionsAns showAnswer={showAnswer} setScore={setScore} key={value}/>
+            <Footer showAnswer={showAnswer} setShowAnswer={setShowAnswer} score={score} setValue={setValue} setScore={setScore} />
+            
         </div>
 }
