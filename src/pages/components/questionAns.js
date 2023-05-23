@@ -4,16 +4,23 @@ import { useEffect,useState } from "react";
 
 
 export default function QuestionAns({allData,showAnswer,setScore}){
-    const [allQAnswers,setallQAnswers]=useState([])
+    const [allAnswers,setallAnswers]=useState('')
+    const [question,setQuestion]=useState('')
+    const [correctAns,setcorrectAns]=useState('')
+
     useEffect(()=>{
         const randomPosition=Math.floor(Math.random()*4);
         const answerArray=[...allData["incorrect_answers"]]
         answerArray.splice(randomPosition,0,allData["correct_answer"]);
-        setallQAnswers(answerArray)
+        setallAnswers(answerArray)
+        setQuestion(allData["question"])
+        setcorrectAns(allData["correct_answer"])
     },[])
 
+
     return <div className="single-question">
-        <Question question={allData["question"]}/>
-        <Answers answers={allQAnswers} correctAnswer={allData["correct_answer"]} showAnswer={showAnswer} setScore={setScore}/>
+        <Question question={question}/>
+        <Answers answers={allAnswers} correctAnswer={correctAns} showAnswer={showAnswer} setScore={setScore}/>
+        <div className="border-btm"></div>
     </div>
 }

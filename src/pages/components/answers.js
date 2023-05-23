@@ -17,5 +17,6 @@ export default function Answers({ answers, correctAnswer,showAnswer,setScore }) 
         <div > <Answer key="c" name={answers[2]} answer={answers[2]} selectedOption={selectedOption} setSelectedOption={setSelectedOption} showAnswer={showAnswer} correctAnswer={correctAnswer} setScore={setScore}/></div>
 
         <div > <Answer key="d" name={answers[3]} answer={answers[3]} selectedOption={selectedOption} setSelectedOption={setSelectedOption} showAnswer={showAnswer} correctAnswer={correctAnswer} setScore={setScore}/></div>
+        
     </div>
 }
