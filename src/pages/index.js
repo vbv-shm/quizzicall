@@ -1,6 +1,6 @@
 import { useState } from "react";
-import AllQuestionsAns from "./components/allQuestionsAns";
-import Footer from "./components/footer";
+import AllQuestionsAns from "../components/allQuestionsAns";
+import Footer from "../components/footer";
 
 export default function Questions_page(){
     console.log("rerendered Questionpage")
